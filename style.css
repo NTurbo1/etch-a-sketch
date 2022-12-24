@@ -1,0 +1,21 @@
+#grid-container {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+}
+
+#grid-container > div {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+
+#grid-container > div > div {
+    flex: 1;
+}
