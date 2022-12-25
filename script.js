@@ -56,8 +56,13 @@ sizeSubmitButton.addEventListener('click', () => {
     currentSketchPad = document.createElement('div');
     currentSketchPad.id = 'grid-container';
     body.appendChild(currentSketchPad);
-
     buildSketchPad(rangeInput.value, currentSketchPad);
+    buttonsDiv.removeChild(sizeSubmitButton);
+    buttonsDiv.removeChild(rangeInput);
+    buttonsDiv.removeChild(rangeInputValueOutput);
+    rangeInput.value = '50';
+    rangeInputValueOutput.textContent = rangeInput.value;
+    buttonsDiv.appendChild(sizeButton);
 });
 
 function insertAfter(referenceNode, newNode) {
